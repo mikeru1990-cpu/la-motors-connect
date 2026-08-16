@@ -2,6 +2,7 @@
 import {FormEvent,useEffect,useMemo,useState} from 'react';
 import Link from 'next/link';
 import {getBrowserSupabase} from '../../../lib/supabase-browser';
+import './stock.css';
 
 type Stock={id:string;slug:string;make:string;model:string;derivative:string|null;year:number|null;price:number|null;mileage:number|null;fuel:string|null;gearbox:string|null;colour:string|null;mot:string|null;service_history:string|null;description:string|null;status:string;featured:boolean};
 const empty={make:'',model:'',derivative:'',year:'',price:'',mileage:'',fuel:'Petrol',gearbox:'Manual',colour:'',mot:'',service_history:'',description:'',status:'draft',featured:false};
