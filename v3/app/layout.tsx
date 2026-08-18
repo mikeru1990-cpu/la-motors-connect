@@ -1,5 +1,6 @@
 import './globals.css';
 import './dashboard.css';
+import './photo.css';
 import Link from 'next/link';
 
 export const metadata={title:'L.A Motors Stroud Ltd',description:'Workshop services, vehicle sales and online booking in Stroud.'};
