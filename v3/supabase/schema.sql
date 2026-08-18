@@ -49,11 +49,14 @@ create table if not exists public.stock_vehicles (
   mot text,
   service_history text,
   description text,
+  image_urls text[] not null default '{}',
   status text not null default 'available' check (status in ('draft','available','reserved','sold')),
   featured boolean not null default false,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.stock_vehicles add column if not exists image_urls text[] not null default '{}';
 
 alter table public.bookings enable row level security;
 alter table public.customers enable row level security;
@@ -98,6 +101,35 @@ on public.stock_vehicles for all
 to authenticated
 using (true)
 with check (true);
+
+insert into storage.buckets (id,name,public)
+values ('stock-photos','stock-photos',true)
+on conflict (id) do update set public=true;
+
+drop policy if exists "public read stock photos" on storage.objects;
+create policy "public read stock photos"
+on storage.objects for select
+to anon, authenticated
+using (bucket_id='stock-photos');
+
+drop policy if exists "staff upload stock photos" on storage.objects;
+create policy "staff upload stock photos"
+on storage.objects for insert
+to authenticated
+with check (bucket_id='stock-photos');
+
+drop policy if exists "staff update stock photos" on storage.objects;
+create policy "staff update stock photos"
+on storage.objects for update
+to authenticated
+using (bucket_id='stock-photos')
+with check (bucket_id='stock-photos');
+
+drop policy if exists "staff delete stock photos" on storage.objects;
+create policy "staff delete stock photos"
+on storage.objects for delete
+to authenticated
+using (bucket_id='stock-photos');
 
 create or replace function public.set_updated_at()
 returns trigger language plpgsql as $$
