@@ -1,5 +1,10 @@
 [build]
-  publish = "."
+  base = "v3"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 [[headers]]
   for = "/*"
@@ -8,8 +13,3 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
