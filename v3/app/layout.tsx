@@ -1,17 +1,14 @@
 import './globals.css';
 import './dashboard.css';
 import './photo.css';
-import './polish.css';
 import './showroom.css';
-import './professional.css';
 import './premium.css';
-import './signature.css';
-import './chrome-upgrade.css';
+import './unified.css';
 import Link from 'next/link';
 
 export const metadata={title:'L.A Motors Stroud Ltd',description:'Automotive specialists, workshop services and quality used vehicles in Stroud.'};
 
-function BrandMark(){return <div className="realPosterLogo" role="img" aria-label="L.A Motors Stroud Ltd Automotive Specialists"/>}
+function BrandMark(){return <div className="brandSystem"><div className="realPosterLogo" role="img" aria-label="L.A Motors Stroud Ltd Automotive Specialists"/><span className="brandCompanyName">L.A Motors Stroud Ltd</span></div>}
 
 export default function RootLayout({children}:{children:React.ReactNode}){
  return <html lang="en"><body>
