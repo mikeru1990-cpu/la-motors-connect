@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export const metadata={title:'L.A Motors Stroud Ltd',description:'Automotive specialists, workshop services and quality used vehicles in Stroud.'};
 
-function BrandMark(){return <div className="laBrand"><span className="carSilhouette" aria-hidden="true"><i/><i/><i/></span><span className="laName"><b>L.A MOTORS</b><small>STROUD LTD</small></span></div>}
+function BrandMark(){return <img src="/la-motors-official.svg" alt="L.A Motors Stroud Ltd Automotive Specialists" className="officialLogo"/>}
 
 export default function RootLayout({children}:{children:React.ReactNode}){
  return <html lang="en"><body>
