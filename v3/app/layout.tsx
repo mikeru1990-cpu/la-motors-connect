@@ -9,6 +9,7 @@ import './customer-portal.css';
 import './services/services.css';
 import './mobile-refinement.css';
 import './quality-pass.css';
+import './premium-v2.css';
 import Link from 'next/link';
 import {BRAND_IMAGE} from './brand-image';
 
