@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import './services.css';
 
 const services=[
- {icon:'🔑',name:'Car Keys',price:'From £69',accent:'Blade keys from £69 · Remote keys from £99',text:'Spare key, lost key or remote key? We can help with cutting and programming.',book:'Car Keys',cta:'Book Car Keys'},
- {icon:'❄',name:'Air-Con Re-Gas',price:'From £50',accent:'R134a from £50 · R1234yf from £80',text:'Air-con not blowing cold? Book a re-gas check for older and newer refrigerant systems.',book:'Air-Con',cta:'Book Air-Con'},
- {icon:'⚠',name:'Diagnostics',price:'Get a Quote',accent:'Warning lights · electrical faults · fault finding',text:'Got a warning light or an issue you cannot explain? Tell us what the car is doing and we will investigate.',book:'Diagnostics',cta:'Book Diagnostics'},
- {icon:'🛠',name:'Servicing',price:'Get a Quote',accent:'Routine maintenance · interim · full service',text:'Keep your car maintained with servicing matched to the vehicle and what it actually needs.',book:'Servicing & Repairs',cta:'Book a Service'},
- {icon:'🔧',name:'Repairs',price:'Get a Quote',accent:'Brakes · suspension · batteries · general repairs',text:'For mechanical repairs, send us the details and we will advise on the next step and likely costs.',book:'Servicing & Repairs',cta:'Book a Repair'},
+ {icon:'KEY',name:'Car Keys',price:'From £69',accent:'Blade keys from £69 · Remote keys from £99',text:'Spare key, lost key or remote key? We can help with cutting and programming.',book:'Car Keys',cta:'Book Car Keys'},
+ {icon:'A/C',name:'Air-Con Re-Gas',price:'From £50',accent:'R134a from £50 · R1234yf from £80',text:'Air-con not blowing cold? Book a re-gas check for older and newer refrigerant systems.',book:'Air-Con',cta:'Book Air-Con'},
+ {icon:'DIA',name:'Diagnostics',price:'Get a Quote',accent:'Warning lights · electrical faults · fault finding',text:'Got a warning light or an issue you cannot explain? Tell us what the car is doing and we will investigate.',book:'Diagnostics',cta:'Book Diagnostics'},
+ {icon:'SRV',name:'Servicing',price:'Get a Quote',accent:'Routine maintenance · interim · full service',text:'Keep your car maintained with servicing matched to the vehicle and what it actually needs.',book:'Servicing & Repairs',cta:'Book a Service'},
+ {icon:'REP',name:'Repairs',price:'Get a Quote',accent:'Brakes · suspension · batteries · general repairs',text:'For mechanical repairs, send us the details and we will advise on the next step and likely costs.',book:'Servicing & Repairs',cta:'Book a Repair'},
  {icon:'MOT',name:'MOT',price:'Coming Soon',accent:'Register interest now',text:'MOT testing is planned. Leave your details now and we can contact you when bookings open.',book:'MOT Interest',cta:'Register for MOT'}
 ];
 
