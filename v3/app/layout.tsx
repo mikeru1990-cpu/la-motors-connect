@@ -5,12 +5,13 @@ import './showroom.css';
 import './premium.css';
 import './unified.css';
 import './operations.css';
+import './final-shell.css';
 import Link from 'next/link';
 import {BRAND_IMAGE} from './brand-image';
 
 export const metadata={title:'L.A Motors Stroud Ltd',description:'Automotive specialists, workshop services and quality used vehicles in Stroud.'};
 
-function BrandMark(){return <div className="brandSystem"><img className="brandImageOfficial" src={BRAND_IMAGE} alt="L.A Motors Stroud Ltd — Automotive Specialists"/></div>}
+function BrandMark(){return <div className="brandSystem"><img className="brandImageOfficial" src={BRAND_IMAGE} alt="L.A Motors Stroud Ltd official logo"/><span className="brandTextLockup"><strong>L.A Motors</strong><b>Stroud Ltd</b><small>Automotive Specialists</small></span></div>}
 
 export default function RootLayout({children}:{children:React.ReactNode}){
  return <html lang="en"><body>
