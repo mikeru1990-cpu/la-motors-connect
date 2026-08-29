@@ -1,0 +1,112 @@
+/* Final mobile-first refinement: loaded last so customer pages stay readable and action-led */
+
+/* SERVICES */
+.servicesPage{background:#05080c!important;color:#f4f7f9!important;min-height:100vh!important}
+.servicesPage .servicesHero{position:relative!important;overflow:hidden!important;background:radial-gradient(circle at 88% 10%,rgba(7,142,242,.18),transparent 32%),linear-gradient(145deg,#05080c 0%,#08111a 100%)!important;border-bottom:1px solid #39434c!important}
+.servicesPage .servicesHero:after{content:'';position:absolute;right:-85px;top:-30px;width:330px;height:220px;background:linear-gradient(135deg,transparent 0 48%,rgba(255,255,255,.32) 48.3% 48.8%,transparent 49.1% 55%,rgba(255,255,255,.75) 55.3% 55.8%,transparent 56.1% 62%,rgba(7,142,242,.9) 62.3% 63%,transparent 63.3%);opacity:.42;pointer-events:none}
+.servicesPage .servicesHeroInner{position:relative!important;z-index:2!important;display:grid!important;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr)!important;gap:34px!important;align-items:center!important;padding:50px 0!important}
+.servicesPage .servicesKicker,.servicesPage .servicesSectionHead>span,.servicesPage .servicesHelp>div>span{display:block!important;color:#2aa9ff!important;font-size:11px!important;font-weight:900!important;letter-spacing:.22em!important;text-transform:uppercase!important}
+.servicesPage .servicesHero h1{font-size:clamp(42px,5.4vw,72px)!important;line-height:.98!important;letter-spacing:-.045em!important;margin:12px 0 18px!important;max-width:720px!important}
+.servicesPage .servicesHero p{max-width:680px!important;color:#aeb8c1!important;font-size:17px!important;line-height:1.6!important;margin:0!important}
+.servicesPage .servicesHeroActions{display:flex!important;gap:10px!important;flex-wrap:wrap!important;margin-top:24px!important}
+.servicesPage .servicesPrimary,.servicesPage .servicesSecondary{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:48px!important;padding:0 20px!important;text-decoration:none!important;font-size:11px!important;font-weight:900!important;letter-spacing:.11em!important;text-transform:uppercase!important;border-radius:1px!important}
+.servicesPage .servicesPrimary{background:linear-gradient(180deg,#18a0ff,#0875ca)!important;color:white!important;border:1px solid #4cbaff!important}
+.servicesPage .servicesSecondary{background:#080d12!important;color:white!important;border:1px solid #59636c!important}
+.servicesPage .servicesPromise{display:grid!important;grid-template-columns:1fr 1fr!important;gap:0!important;padding:0!important;border:1px solid #3f4a53!important;border-top:2px solid #159cf2!important;background:#090e14!important}
+.servicesPage .servicesPromise strong{grid-column:1/-1!important;padding:15px 17px!important;border-bottom:1px solid #303a42!important;color:white!important;font-size:11px!important;letter-spacing:.13em!important}
+.servicesPage .servicesPromise span{display:block!important;padding:14px 16px!important;border-right:1px solid #242e36!important;border-bottom:1px solid #242e36!important;color:#b2bcc4!important;font-size:13px!important;line-height:1.35!important}
+.servicesPage .servicesChooser{padding-top:46px!important;padding-bottom:48px!important}
+.servicesPage .servicesSectionHead{max-width:760px!important;margin-bottom:24px!important}
+.servicesPage .servicesSectionHead h2{font-size:38px!important;line-height:1.05!important;margin:8px 0 10px!important}
+.servicesPage .servicesSectionHead p{color:#9eabb4!important;font-size:16px!important;line-height:1.55!important;margin:0!important}
+.servicesPage .servicesGrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+.servicesPage .serviceChoice{position:relative!important;display:grid!important;grid-template-rows:auto auto 1fr auto auto!important;min-height:318px!important;padding:24px!important;background:linear-gradient(160deg,#0c1218,#080c11)!important;border:1px solid #414b54!important;border-top:2px solid #129bf2!important;border-radius:1px!important;overflow:hidden!important;box-shadow:none!important}
+.servicesPage .serviceChoice:after{content:'';position:absolute;right:-52px;bottom:-42px;width:180px;height:140px;background:linear-gradient(135deg,transparent 48%,rgba(7,142,242,.2) 48.5% 49.5%,transparent 50%);pointer-events:none}
+.servicesPage .serviceChoiceTop{display:flex!important;align-items:center!important;gap:14px!important}
+.servicesPage .serviceChoiceIcon{flex:0 0 52px!important;width:52px!important;height:52px!important;display:grid!important;place-items:center!important;background:#071827!important;border:1px solid #1b75aa!important;color:#35b1ff!important;font-size:12px!important;font-weight:950!important;letter-spacing:.08em!important}
+.servicesPage .serviceChoice h3{font-size:25px!important;line-height:1.05!important;margin:0 0 6px!important;color:#fff!important}
+.servicesPage .serviceChoiceTop strong{display:block!important;color:#33afff!important;font-size:15px!important}
+.servicesPage .serviceChoice p{margin:21px 0 14px!important;color:#abb6bf!important;font-size:15px!important;line-height:1.55!important}
+.servicesPage .serviceChoice small{display:block!important;padding-top:13px!important;border-top:1px solid #2c363e!important;color:#d0d7dc!important;font-size:12px!important;line-height:1.45!important;font-weight:700!important}
+.servicesPage .serviceBookBtn{position:relative!important;z-index:2!important;display:flex!important;align-items:center!important;justify-content:space-between!important;width:100%!important;min-height:48px!important;margin-top:18px!important;padding:0 16px!important;background:linear-gradient(180deg,#159fff,#0774c9)!important;border:1px solid #45b7ff!important;color:#fff!important;text-decoration:none!important;font-size:11px!important;font-weight:950!important;letter-spacing:.08em!important;text-transform:uppercase!important}
+.servicesPage .serviceBookBtn span{font-size:20px!important}
+.servicesPage .servicesHelp{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:28px!important;margin-bottom:62px!important;padding:28px!important;background:linear-gradient(100deg,#0a1722,#080d12)!important;border:1px solid #3c4b56!important;border-left:3px solid #159ff7!important}
+.servicesPage .servicesHelp h2{font-size:31px!important;margin:7px 0 9px!important}
+.servicesPage .servicesHelp p{color:#9fadb7!important;line-height:1.55!important;max-width:720px!important;margin:0!important}
+.servicesPage .servicesHelpActions{display:flex!important;gap:10px!important;flex:0 0 auto!important}
+
+/* BOOKING */
+.bookingPage{background:linear-gradient(180deg,#071018,#05080c)!important;color:#f3f6f8!important;min-height:calc(100vh - 100px)!important;padding:42px 0 105px!important}
+.bookingPage .bookingHead{max-width:880px!important;margin:0 0 22px!important;padding-bottom:18px!important;border-bottom:1px solid #33404a!important}
+.bookingPage .bookingHead>span{color:#2aaaff!important;font-size:10px!important;font-weight:950!important;letter-spacing:.2em!important}
+.bookingPage .bookingHead h1{font-size:clamp(36px,5vw,56px)!important;line-height:1!important;margin:9px 0 10px!important}
+.bookingPage .bookingHead p{color:#a4b0b9!important;font-size:16px!important;line-height:1.55!important;margin:0!important}
+.bookingPage .bookingCard{max-width:880px!important;padding:26px!important;background:#0b1117!important;border:1px solid #3c4852!important;border-top:2px solid #149cf2!important;box-shadow:0 18px 50px rgba(0,0,0,.28)!important}
+.bookingPage .bookingProgress{display:grid!important;grid-template-columns:repeat(5,1fr)!important;gap:5px!important;margin-bottom:28px!important}
+.bookingPage .bookingProgress span{min-height:39px!important;display:grid!important;place-items:center!important;padding:7px 6px!important;background:#070c11!important;border:1px solid #26313a!important;border-bottom:2px solid #37434d!important;color:#6f7e89!important;font-size:10px!important;font-weight:900!important;white-space:nowrap!important}
+.bookingPage .bookingProgress span.active{background:#0a2234!important;border-color:#118edc!important;border-bottom-color:#31b0ff!important;color:#fff!important}
+.bookingPage .bookingStepTag{display:block!important;color:#29aaff!important;font-size:10px!important;font-weight:950!important;letter-spacing:.17em!important;margin-bottom:7px!important}
+.bookingPage .bookingCard h2{font-size:30px!important;line-height:1.08!important;margin:0 0 20px!important}
+.bookingPage .bookingChoices{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:9px!important}
+.bookingPage .bookingChoice{appearance:none!important;width:100%!important;display:flex!important;align-items:center!important;gap:14px!important;min-height:78px!important;padding:14px!important;text-align:left!important;background:#0a151e!important;border:1px solid #334653!important;color:white!important;border-radius:1px!important}
+.bookingPage .bookingChoice:active,.bookingPage .bookingChoice:focus{border-color:#24a9ff!important;background:#0b2030!important}
+.bookingPage .bookingChoiceCode{flex:0 0 46px!important;width:46px!important;height:46px!important;display:grid!important;place-items:center!important;background:#071c2c!important;border:1px solid #1b6b99!important;color:#31b0ff!important;font-size:11px!important;font-weight:950!important}
+.bookingPage .bookingChoice b{display:block!important;font-size:16px!important;color:#fff!important}
+.bookingPage .bookingChoice small{display:block!important;margin-top:4px!important;color:#768a99!important;font-size:11px!important}
+.bookingPage .bookingFields{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important}
+.bookingPage .bookingFields label{display:grid!important;gap:7px!important;color:#c9d2d9!important;font-size:11px!important;font-weight:900!important;letter-spacing:.04em!important}
+.bookingPage .bookingFields input,.bookingPage .bookingFields textarea{width:100%!important;min-height:52px!important;padding:14px!important;background:#070d12!important;border:1px solid #45535f!important;color:white!important;font-size:16px!important;border-radius:1px!important}
+.bookingPage .bookingFields textarea{min-height:124px!important;resize:vertical!important}
+.bookingPage .bookingSummary{border:1px solid #34424d!important;background:#080d12!important}
+.bookingPage .bookingSummaryRow{display:grid!important;grid-template-columns:150px 1fr!important;gap:16px!important;padding:14px!important;border-bottom:1px solid #27323a!important}
+.bookingPage .bookingSummaryRow b{color:#8999a5!important}
+.bookingPage .bookingActions{display:flex!important;gap:10px!important;margin-top:24px!important}
+.bookingPage .bookingBtn{min-height:50px!important;padding:0 22px!important;background:linear-gradient(180deg,#18a0ff,#0875ca)!important;border:1px solid #49b9ff!important;color:#fff!important;font-size:11px!important;font-weight:950!important;letter-spacing:.08em!important;border-radius:1px!important}
+.bookingPage .bookingBtn.secondary{background:#080e14!important;border-color:#4a5660!important}
+
+/* Fixed mobile nav must not cover content */
+@media(max-width:760px){
+ body{padding-bottom:82px!important}
+ footer{padding-bottom:22px!important}
+ .servicesPage .servicesHeroInner{grid-template-columns:1fr!important;gap:20px!important;padding:30px 0 32px!important}
+ .servicesPage .servicesHero h1{font-size:39px!important;line-height:1.02!important;margin-top:10px!important}
+ .servicesPage .servicesHero p{font-size:15px!important;line-height:1.52!important}
+ .servicesPage .servicesHeroActions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;margin-top:20px!important}
+ .servicesPage .servicesPrimary,.servicesPage .servicesSecondary{width:100%!important;min-height:46px!important;padding:0 10px!important;font-size:10px!important}
+ .servicesPage .servicesPromise{grid-template-columns:1fr 1fr!important}
+ .servicesPage .servicesPromise strong{font-size:10px!important;padding:13px 14px!important}
+ .servicesPage .servicesPromise span{padding:12px 13px!important;font-size:11px!important}
+ .servicesPage .servicesChooser{padding-top:34px!important;padding-bottom:36px!important}
+ .servicesPage .servicesSectionHead h2{font-size:31px!important}
+ .servicesPage .servicesSectionHead p{font-size:14px!important}
+ .servicesPage .servicesGrid{grid-template-columns:1fr!important;gap:11px!important}
+ .servicesPage .serviceChoice{min-height:0!important;padding:18px!important}
+ .servicesPage .serviceChoiceTop{gap:12px!important}
+ .servicesPage .serviceChoiceIcon{flex-basis:46px!important;width:46px!important;height:46px!important}
+ .servicesPage .serviceChoice h3{font-size:22px!important}
+ .servicesPage .serviceChoice p{font-size:14px!important;margin:17px 0 12px!important}
+ .servicesPage .serviceChoice small{font-size:11px!important}
+ .servicesPage .serviceBookBtn{min-height:46px!important;margin-top:16px!important}
+ .servicesPage .servicesHelp{align-items:stretch!important;flex-direction:column!important;padding:20px!important;margin-bottom:30px!important}
+ .servicesPage .servicesHelp h2{font-size:27px!important}
+ .servicesPage .servicesHelpActions{display:grid!important;grid-template-columns:1fr 1fr!important;width:100%!important}
+
+ .bookingPage{padding:28px 0 105px!important}
+ .bookingPage .bookingHead{margin-bottom:14px!important;padding-bottom:14px!important}
+ .bookingPage .bookingHead h1{font-size:34px!important}
+ .bookingPage .bookingHead p{font-size:14px!important}
+ .bookingPage .bookingCard{padding:16px!important}
+ .bookingPage .bookingProgress{gap:4px!important;margin-bottom:22px!important}
+ .bookingPage .bookingProgress span{min-height:34px!important;font-size:0!important;padding:4px!important}
+ .bookingPage .bookingProgress span:before{content:attr(data-step)!important;font-size:11px!important}
+ .bookingPage .bookingProgress span.active{font-size:0!important}
+ .bookingPage .bookingCard h2{font-size:25px!important;margin-bottom:16px!important}
+ .bookingPage .bookingChoices{grid-template-columns:1fr!important;gap:8px!important}
+ .bookingPage .bookingChoice{min-height:68px!important;padding:11px 12px!important}
+ .bookingPage .bookingChoiceCode{flex-basis:42px!important;width:42px!important;height:42px!important}
+ .bookingPage .bookingFields{grid-template-columns:1fr!important;gap:12px!important}
+ .bookingPage .bookingSummaryRow{grid-template-columns:1fr!important;gap:4px!important;padding:12px!important}
+ .bookingPage .bookingActions{display:grid!important;grid-template-columns:1fr 1fr!important}
+ .bookingPage .bookingActions .bookingBtn:only-child{grid-column:1/-1!important}
+ .bookingPage .bookingBtn{width:100%!important;padding:0 12px!important}
+}
