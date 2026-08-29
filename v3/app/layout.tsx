@@ -8,6 +8,7 @@ import './operations.css';
 import './customer-portal.css';
 import './services/services.css';
 import './mobile-refinement.css';
+import './quality-pass.css';
 import Link from 'next/link';
 import {BRAND_IMAGE} from './brand-image';
 
