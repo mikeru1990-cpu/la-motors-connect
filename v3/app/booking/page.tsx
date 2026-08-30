@@ -1,6 +1,5 @@
 'use client';
 import {useEffect,useMemo,useState} from 'react';
-import {useSearchParams} from 'next/navigation';
 import './booking.css';
 
 const steps=['Service','Vehicle','Date','Contact','Review'];
@@ -14,10 +13,9 @@ const services=[
 ];
 
 export default function Booking(){
- const params=useSearchParams();
  const [step,setStep]=useState(0),[submitted,setSubmitted]=useState(false),[saving,setSaving]=useState(false),[error,setError]=useState('');
  const [form,setForm]=useState({service:'',reg:'',vehicle:'',date:'',name:'',phone:'',notes:''});
- useEffect(()=>{const requested=params.get('service');if(requested&&services.some(s=>s.name===requested)){setForm(f=>({...f,service:requested}));setStep(1)}},[params]);
+ useEffect(()=>{const requested=new URLSearchParams(window.location.search).get('service');if(requested&&services.some(s=>s.name===requested)){setForm(f=>({...f,service:requested}));setStep(1)}},[]);
  const update=(k:string,v:string)=>setForm({...form,[k]:v});
  const canContinue=useMemo(()=>{if(step===1)return form.reg.trim().length>=5;if(step===2)return !!form.date;if(step===3)return form.name.trim().length>1&&form.phone.trim().length>6;return true},[step,form]);
  const selected=services.find(s=>s.name===form.service);
