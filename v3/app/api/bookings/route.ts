@@ -18,16 +18,34 @@ export async function POST(request:Request){
     if(service!=='Vehicle Viewing'&&registration.length<5)return NextResponse.json({ok:false,error:'Please enter a valid vehicle registration.'},{status:400});
     if(service==='Vehicle Viewing'&&!vehicle)return NextResponse.json({ok:false,error:'Please select or enter the vehicle you want to view.'},{status:400});
 
-    const supabase=getSupabase();
-    if(!supabase)return NextResponse.json({ok:false,error:'Booking service is temporarily unavailable. Please call Liam on 07484 770941.'},{status:503});
-    const payload={service,registration,vehicle,preferred_date:preferredDate,customer_name:customerName,phone,notes,status:'pending'};
-    const {error}=await supabase.from('bookings').insert(payload);
-    if(error){
-      console.error('Booking insert failed',{code:error.code,message:error.message,details:error.details,hint:error.hint});
-      const policy=error.code==='42501';
-      return NextResponse.json({ok:false,error:policy?'Online booking permission needs refreshing. Please call Liam on 07484 770941.':'We could not save the booking just now. Please try again or call Liam on 07484 770941.',code:error.code},{status:500});
+    const anon=getSupabase();
+    if(!anon)return NextResponse.json({ok:false,error:'Booking service is temporarily unavailable. Please call Liam on 07484 770941.'},{status:503});
+
+    const authHeader=request.headers.get('authorization')||'';
+    const token=authHeader.startsWith('Bearer ')?authHeader.slice(7).trim():'';
+    let userId:string|null=null;
+    let supabase=anon;
+    if(token){
+      const{data,error}=await anon.auth.getUser(token);
+      if(!error&&data.user){
+        userId=data.user.id;
+        const authed=getSupabase(token);
+        if(authed)supabase=authed;
+      }
     }
-    return NextResponse.json({ok:true,message:'Booking request received.'});
+
+    const payload={service,registration,vehicle,preferred_date:preferredDate,customer_name:customerName,phone,notes,status:'pending',user_id:userId};
+    let result=await supabase.from('bookings').insert(payload);
+    if(result.error?.code==='42703'){
+      const legacy={service,registration,vehicle,preferred_date:preferredDate,customer_name:customerName,phone,notes,status:'pending'};
+      result=await anon.from('bookings').insert(legacy);
+    }
+    if(result.error){
+      console.error('Booking insert failed',{code:result.error.code,message:result.error.message,details:result.error.details,hint:result.error.hint});
+      const policy=result.error.code==='42501';
+      return NextResponse.json({ok:false,error:policy?'Online booking permission needs refreshing. Please call Liam on 07484 770941.':'We could not save the booking just now. Please try again or call Liam on 07484 770941.',code:result.error.code},{status:500});
+    }
+    return NextResponse.json({ok:true,message:'Booking request received.',linkedToGarage:!!userId});
   }catch(error){
     console.error('Booking request failed',error);
     return NextResponse.json({ok:false,error:'We could not send that request. Please try again or call Liam on 07484 770941.'},{status:400});
