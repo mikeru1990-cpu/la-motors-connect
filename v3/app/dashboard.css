@@ -23,3 +23,10 @@
 .bookingInboxActions .bookingConfirm{background:#0786d4;border-color:#0786d4;color:#fff}.bookingInboxActions .bookingCancel{color:#a33339}
 @media(max-width:1050px){.bookingInboxTabs,.bookingInboxList{margin-left:12px;margin-right:12px}}
 @media(max-width:700px){.bookingInboxTabs{margin:9px 9px 0;grid-template-columns:repeat(4,1fr)}.bookingInboxTabs button{padding:9px 3px}.bookingInboxList{margin:8px 9px 16px}.bookingInboxMain{grid-template-columns:1fr;gap:10px;padding:11px}.bookingInboxVehicle{align-items:flex-start}.bookingInboxCustomer,.bookingInboxDate{border-top:1px solid #edf0f2;padding-top:8px}.bookingInboxActions{display:grid;grid-template-columns:1fr 1fr;padding:9px}.bookingInboxActions>*{text-align:center}.bookingInboxActions>:only-child{grid-column:1/-1}}
+
+.workshopCustomerUpdate{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:10px 14px;background:#eef8ff;border-top:1px solid #d4e9f7;border-bottom:1px solid #dbe7ee}
+.workshopCustomerUpdate small{display:block;color:#1688c9;font-size:7px;font-weight:900;letter-spacing:.1em}
+.workshopCustomerUpdate b{display:block;font-size:11px;margin:3px 0}.workshopCustomerUpdate span{display:block;color:#6e7d87;font-size:8px}
+.workshopCustomerUpdate>div:last-child{display:flex;gap:7px}.workshopCustomerUpdate a{border:1px solid #b9d5e7;background:#fff;color:#087fc9;padding:7px 9px;font-size:8px;font-weight:900;text-decoration:none;white-space:nowrap}
+.workshopCustomerUpdate a:last-child{background:#087fc9;border-color:#087fc9;color:#fff}
+@media(max-width:700px){.workshopCustomerUpdate{align-items:flex-start;flex-direction:column}.workshopCustomerUpdate>div:last-child{width:100%;display:grid;grid-template-columns:1fr 1fr}.workshopCustomerUpdate a{text-align:center}}
