@@ -16,3 +16,22 @@
 .bookingProgress .done:before{background:#138dde}.bookingProgress .done i{background:#078ef2;border-color:#55baff;color:#fff}.bookingProgress .done span{color:#d7eaf7}
 .bookingCancelled{padding:14px 18px;background:#261014;color:#ffbcc2;border-top:1px solid #6c3037;font-size:9px;line-height:1.45}
 @media(max-width:560px){.bookingTrackerStatus{flex-direction:column;gap:8px}.bookingTrackerStatus em{white-space:normal}.bookingProgress{padding:14px 6px 16px}.bookingProgress span{font-size:6px}.bookingProgress i{width:21px;height:21px}}
+
+.financeSummary{grid-template-columns:repeat(4,1fr)}
+.customerFinanceHint{font-size:8px;color:#7f8d97;text-transform:uppercase;letter-spacing:.08em}
+.customerFinanceList{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.customerFinanceCard{background:#0d1319;border:1px solid #39444d;border-top:2px solid #168fdf;padding:18px}
+.customerFinanceCard.invoiceCard{border-top-color:#bfc8ce}
+.customerFinanceCard.invoiceCard.paid{border-top-color:#39a96b}
+.customerFinanceTop{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+.customerFinanceTop small{display:block;color:#28a6ff;font-size:7px;font-weight:900;letter-spacing:.1em}
+.customerFinanceTop h3{font-size:13px;margin:5px 0 0}
+.customerFinanceTop strong{font-size:22px;white-space:nowrap}
+.customerFinanceCard>p{color:#9aa6ae;font-size:9px;line-height:1.5;margin:14px 0}
+.customerFinanceMeta{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px solid #2e3740}
+.customerFinanceMeta span{color:#84919a;font-size:8px}
+.customerFinanceMeta b{font-size:8px;color:#99e3b7;letter-spacing:.08em}
+.customerFinanceMeta button{border:1px solid #4db8ff;background:linear-gradient(180deg,#179fff,#056bc2);color:#fff;padding:9px 12px;font-size:8px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.invoiceCard.unpaid .customerFinanceMeta b{color:#ffd479}
+@media(max-width:800px){.financeSummary{grid-template-columns:1fr 1fr}.customerFinanceList{grid-template-columns:1fr}}
+@media(max-width:560px){.financeSummary{grid-template-columns:1fr 1fr}.financeSummary article:first-child{grid-column:auto}.customerFinanceTop strong{font-size:18px}.customerFinanceHint{display:none}.customerFinanceMeta{align-items:flex-start;flex-direction:column}.customerFinanceMeta button{width:100%}}
